@@ -1,8 +1,8 @@
 window.addEventListener('load', () => {
 
     let websocket = new WebSocket('wss://' + 'api-proxy.serveron.org' + ':443/ws');
-    let conntest = new XMLHttpRequest()
-    conntest.open("GET", "https://api-proxy.serveron.org:443", true);
+    let conntest = new Request()
+    conntest.open("GET", "https://api-proxy.serveron.org/", true);
     conntest.send( null );
     conntest.status !== 307 ? window.location.replace("https://api-proxy.serveron.org") : console.log("We have Auth for API");
     Highcharts.chart('graph', {
