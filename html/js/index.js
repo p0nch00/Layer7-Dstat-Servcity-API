@@ -20,6 +20,9 @@ window.addEventListener('load', () => {
                         var y3 = await json.challenged;
                         var y4 = await json.passed
                         await series.addPoint([x, y,y2,y3,y4], true, true);
+                        print(y2);
+                        print(y3);
+                        print(y4);
                     }
                 }
             }
