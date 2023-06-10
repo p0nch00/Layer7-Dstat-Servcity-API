@@ -54,7 +54,7 @@ window.addEventListener('load', () => {
             pointFormat: '{point.x:%Y-%m-%d %H:%M:%S}<br/>{point.y} r/s'
         },
         series: [{
-            name: 'Requests',
+            name: 'Total',
             color: '#FFFFFF',
             data: function () {
                 var data = [];
