@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
             marginRight: 10,
             events: {
                 load: function () {
-                    console.log(http.code);
+                    console.log(websocket.readyState);
                     var s = this.series;
                     websocket.onmessage = async message => {
                         var json = await JSON.parse(message.data);
