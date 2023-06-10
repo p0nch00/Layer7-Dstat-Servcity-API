@@ -41,12 +41,13 @@ window.addEventListener('load', () => {
         title: {
             text: 'Statistics',
             style: {
-                color: '#00FF00',
-                fill: '#D4D4D4'
+                color: '#00FF00'
             }
         },
         xAxis: {
-            color : '#FFFFFF',
+            style: {
+                color: '#FFFFFF'
+            },
             type: 'datetime',
             tickPixelInterval: 150
         },
