@@ -10,19 +10,21 @@ window.addEventListener('load', () => {
             marginRight: 10,
             events: {
                 load: function () {
-                    var series = this.series[0];
+                    var s = this.series;
                     websocket.onmessage = async message => {
                         var json = await JSON.parse(message.data);
                         var date = await new Date();
                         var x = await date.getTime();
                         var y = await json.requests;
-                        var y2 = await json.blocked;
-                        var y3 = await json.challenged;
-                        var y4 = await json.passed
-                        await series.addPoint([x, y,y2,y3,y4], true, true);
-                        console.log(y2);
-                        console.log(y3);
-                        console.log(y4);
+                        var bl = await json.blocked;
+                        var ch = await json.challenged;
+                        var ps = await json.passed
+                        await s[0].addPoint([x, y], true, true);
+                        await s[1].addPoint([x,ch], true, true);
+                        await s[2].addPoint([x,ps], true, true);
+                        await s[3].addPoint([x,bl], true, true);
+
+
                     }
                 }
             }
