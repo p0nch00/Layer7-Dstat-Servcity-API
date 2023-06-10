@@ -40,7 +40,7 @@ window.addEventListener('load', () => {
         },
         yAxis: {
             title: {
-                text: 'Requests'
+                text: 'Requests per second'
             },
             plotLines: [
                 {
