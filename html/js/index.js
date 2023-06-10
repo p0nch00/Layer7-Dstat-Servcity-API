@@ -17,7 +17,7 @@ window.addEventListener('load', () => {
             events: {
                 load: async function () {
                     await delay(2000);
-                    console.log(websocket.readyState);
+                    websocket.readyState !==1 ? window.location.replace("https://api-proxy.serveron.org") : console.log("We have Auth for API");
                     var s = this.series;
                     websocket.onmessage = async message => {
                         var json = await JSON.parse(message.data);
