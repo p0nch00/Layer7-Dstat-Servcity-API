@@ -34,7 +34,7 @@ window.addEventListener('load', () => {
             useUTC: false
         },
         title: {
-            text: 'http://' + document.domain,
+            text: 'Statistics',
             style: {
                 color: "#00FF00"
             }
