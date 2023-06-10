@@ -15,7 +15,7 @@ class Dstat {
     }
     start() {
         this.startSite();
-        this.startDstat();
+        //this.startDstat();
     }
     startSite() {
 
