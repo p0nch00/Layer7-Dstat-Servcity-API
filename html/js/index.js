@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
 
-    let websocket = new WebSocket('ws://' + document.domain + ':{port}');
+    let websocket = new WebSocket('ws://' + '46.162.60.21' + ':8080');
 
     Highcharts.chart('graph', {
         chart: {
