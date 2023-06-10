@@ -45,9 +45,7 @@ window.addEventListener('load', () => {
             }
         },
         xAxis: {
-            style: {
-                color: '#FFFFFF'
-            },
+            style: "color: rgb(51, 51, 51); cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);",
             type: 'datetime',
             tickPixelInterval: 150
         },
