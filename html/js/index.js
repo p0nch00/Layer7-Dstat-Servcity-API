@@ -51,7 +51,7 @@ window.addEventListener('load', () => {
                 {
                     value: 0,
                     width: 1,
-                    color: '#808080'
+                    color: '#FFFFFF'
                 }]
         },
         tooltip: {
