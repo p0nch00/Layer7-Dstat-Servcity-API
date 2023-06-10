@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
 
-    let websocket = new WebSocket('wss://' + 'api-proxy.serveron.org' + ':443');
+    let websocket = new WebSocket('wss://' + 'api-proxy.serveron.org' + ':443/ws');
 
     Highcharts.chart('graph', {
         chart: {
