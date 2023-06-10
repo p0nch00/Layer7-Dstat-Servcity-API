@@ -16,7 +16,10 @@ window.addEventListener('load', () => {
                         var date = await new Date();
                         var x = await date.getTime();
                         var y = await json.requests;
-                        await series.addPoint([x, y], true, true);
+                        var y2 = await json.blocked;
+                        var y3 = await json.challenged;
+                        var y4 = await json.passed
+                        await series.addPoint([x, y,y2,y3,y4], true, true);
                     }
                 }
             }
@@ -39,19 +42,20 @@ window.addEventListener('load', () => {
             title: {
                 text: 'Requests'
             },
-            plotLines: [{
-                value: 0,
-                width: 1,
-                color: '#808080'
-            }]
+            plotLines: [
+                {
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
         },
         tooltip: {
             headerFormat: '<b>{series.name}</b><br/>',
             pointFormat: '{point.x:%Y-%m-%d %H:%M:%S}<br/>{point.y} r/s'
         },
         series: [{
-            name: 'Requests per second',
-            color: '#00FF00',
+            name: 'Requests',
+            color: '#FFFFFF',
             data: function () {
                 var data = [];
                 var date = new Date();
@@ -65,7 +69,58 @@ window.addEventListener('load', () => {
                 }
                 return data;
             }()
-        }]
+        },
+            {
+                name: 'Challenged',
+                color: '#ffaa00',
+                data: function () {
+                    var data = [];
+                    var date = new Date();
+                    var time = date.getTime();
+
+                    for (var i = -19; i <= 0; i += 1) {
+                        data.push({
+                            x: time + i * 1000,
+                            y: 0
+                        });
+                    }
+                    return data;
+                }()
+            },
+            {
+                name: 'Passed',
+                color: '#00FF00',
+                data: function () {
+                    var data = [];
+                    var date = new Date();
+                    var time = date.getTime();
+
+                    for (var i = -19; i <= 0; i += 1) {
+                        data.push({
+                            x: time + i * 1000,
+                            y: 0
+                        });
+                    }
+                    return data;
+                }()
+            },
+            {
+                name: 'Blocked',
+                color: '#FF0000',
+                data: function () {
+                    var data = [];
+                    var date = new Date();
+                    var time = date.getTime();
+
+                    for (var i = -19; i <= 0; i += 1) {
+                        data.push({
+                            x: time + i * 1000,
+                            y: 0
+                        });
+                    }
+                    return data;
+                }()
+            }]
     });
 
     document.querySelector('.highcharts-credits').remove();
