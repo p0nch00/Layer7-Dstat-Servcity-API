@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
     Highcharts.chart('graph', {
         chart: {
             type: 'spline',
-            backgroundColor: 'rgba(0, 0, 0, 0)',
+            backgroundColor: 'rgba(0, 255, 0, 0)',
             animation: Highcharts.svg,
             marginRight: 10,
             events: {
