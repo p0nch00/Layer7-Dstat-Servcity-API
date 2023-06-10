@@ -9,7 +9,7 @@ window.addEventListener('load', () => {
             animation: Highcharts.svg,
             legend: {
               color: '#D4D4D4',
-              fillColor: '#D4D4D4'
+              fill: '#D4D4D4'
 
             },
             marginRight: 10,
