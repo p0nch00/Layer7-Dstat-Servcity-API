@@ -1,11 +1,6 @@
 window.addEventListener('load', () => {
 
     let websocket = new WebSocket('wss://' + 'api-proxy.serveron.org' + ':443/ws');
-    const conntest = new Request("https://api-proxy.serveron.org/")
-    fetch(conntest).then((response) => {
-        console.log(response.status);
-        response.status !== 307 ? window.location.replace("https://api-proxy.serveron.org") : console.log("We have Auth for API");
-    })
 
     Highcharts.chart('graph', {
         chart: {
@@ -34,6 +29,7 @@ window.addEventListener('load', () => {
                         await s[1].addPoint([x,ch], true, true);
                         await s[2].addPoint([x,ps], true, true);
                         await s[3].addPoint([x,bl], true, true);
+                        console.log(websocket.readyState)
 
 
                     }
