@@ -1,6 +1,7 @@
 window.addEventListener('load', () => {
 
     let websocket = new WebSocket('wss://' + 'api-proxy.serveron.org' + ':443/ws');
+    const delay = ms => new Promise(res => setTimeout(res, ms));
 
     Highcharts.chart('graph', {
         chart: {
@@ -14,7 +15,8 @@ window.addEventListener('load', () => {
             },
             marginRight: 10,
             events: {
-                load: function () {
+                load: async function () {
+                    await delay(2000);
                     console.log(websocket.readyState);
                     var s = this.series;
                     websocket.onmessage = async message => {
@@ -26,12 +28,9 @@ window.addEventListener('load', () => {
                         var ch = await json.challenged;
                         var ps = await json.passed
                         await s[0].addPoint([x, y], true, true);
-                        await s[1].addPoint([x,ch], true, true);
-                        await s[2].addPoint([x,ps], true, true);
-                        await s[3].addPoint([x,bl], true, true);
-                        console.log(websocket.readyState)
-
-
+                        await s[1].addPoint([x, ch], true, true);
+                        await s[2].addPoint([x, ps], true, true);
+                        await s[3].addPoint([x, bl], true, true);
                     }
                 }
             }
