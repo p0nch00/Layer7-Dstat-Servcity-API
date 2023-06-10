@@ -1,10 +1,12 @@
 window.addEventListener('load', () => {
 
     let websocket = new WebSocket('wss://' + 'api-proxy.serveron.org' + ':443/ws');
-    let conntest = new Request()
-    conntest.open("GET", "https://api-proxy.serveron.org/", true);
-    conntest.send( null );
-    conntest.status !== 307 ? window.location.replace("https://api-proxy.serveron.org") : console.log("We have Auth for API");
+    const conntest = new Request("https://api-proxy.serveron.org/")
+    fetch(conntest).then((response) => {
+        console.log(response.status);
+        response.status !== 307 ? window.location.replace("https://api-proxy.serveron.org") : console.log("We have Auth for API");
+    })
+
     Highcharts.chart('graph', {
         chart: {
             type: 'spline',
