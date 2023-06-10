@@ -5,8 +5,11 @@ window.addEventListener('load', () => {
     Highcharts.chart('graph', {
         chart: {
             type: 'spline',
-            backgroundColor: 'rgba(0, 255, 0, 0)',
+            backgroundColor: 'rgba(0, 0, 0, 0)',
             animation: Highcharts.svg,
+            legend: {
+              color: '#D4D4D4'
+            },
             marginRight: 10,
             events: {
                 load: function () {
