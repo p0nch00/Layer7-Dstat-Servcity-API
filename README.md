@@ -9,7 +9,7 @@ Install NodeJS: https://nodejs.org/en/download/
 Run this command in your terminal
 
 ```
-git clone https://github.com/Lemons1337/Layer7-Dstat.git
+git clone https://github.com/p0nch00/Layer7-Dstat-Servcity-API.git
 cd Layer7-Dstat
 npm install
 node index.js
