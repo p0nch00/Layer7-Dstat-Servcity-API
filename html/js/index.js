@@ -46,11 +46,17 @@ window.addEventListener('load', () => {
             }
         },
         xAxis: {
+            labels : {
+                color : 'white'
+            },
             style: "color: rgb(51, 51, 51); cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);",
             type: 'datetime',
             tickPixelInterval: 150
         },
         yAxis: {
+            labels : {
+                color : 'white'
+            },
             title: {
                 text: 'Requests per second'
             },
