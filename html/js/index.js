@@ -46,14 +46,12 @@ window.addEventListener('load', () => {
             }
         },
         xAxis: {
-            labels : {
-                color : 'white'
-            },
-            style: "color: rgb(51, 51, 51); cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);",
+            style: "color: rgb(255, 255, 255); cursor: default; font-size: 0.8em; fill: rgb(255, 255, 255);",
             type: 'datetime',
             tickPixelInterval: 150
         },
         yAxis: {
+            style: "color: rgb(255, 255, 255); cursor: default; font-size: 0.8em; fill: rgb(255, 255, 255);",
             labels : {
                 color : 'white'
             },
