@@ -6,8 +6,8 @@ html, body {
 }
 
 a {
-	text-decoration: none;
-	color: green;
+    text-decoration: none;
+    color: green;
 }
 
 .hostname {
@@ -23,7 +23,7 @@ a {
     color: green;
     font-weight: bold;
 }
-	
+
 .wrapper {
     background-color:#262626;
     display: flex;
@@ -35,14 +35,14 @@ a {
 }
 
 p {
-	color: green;
+    color: green;
 }
 
 .top {
-	border: 3px solid green;
-	border-radius: 50px;
-	color: green;
-	font-weight: bold;
+    border: 3px solid green;
+    border-radius: 50px;
+    color: green;
+    font-weight: bold;
     font-size: 24pt;
     padding: 10px;
 }
@@ -63,14 +63,14 @@ p {
 }
 
 .copyright {
-	color: green;
-	font-weight: bold;
-	font-weight: italic;
-	font-weight: underline;
-	font-size: 9pt;
+    color: green;
+    font-weight: bold;
+    font-weight: italic;
+    font-weight: underline;
+    font-size: 9pt;
     padding: 5px;
     border: 3px solid green;
-	border-radius: 50px;
+    border-radius: 50px;
 }
 
 #graph {
