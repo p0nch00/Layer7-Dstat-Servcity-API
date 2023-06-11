@@ -1,7 +1,8 @@
 {
     "dependencies": {
-        "fs": "^0.0.1-security",
+        "darkreader": "^4.9.58",
         "express": "^4.16.4",
+        "fs": "^0.0.1-security",
         "ws": "^6.1.2"
     }
 }

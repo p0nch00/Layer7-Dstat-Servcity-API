@@ -2,6 +2,11 @@ window.addEventListener('load', () => {
 
     let websocket = new WebSocket('wss://' + 'api-proxy.serveron.org' + ':443/ws');
     const delay = ms => new Promise(res => setTimeout(res, ms));
+    DarkReader.enable({
+        brightness: 100,
+        contrast: 90,
+        sepia: 10
+    });
 
     Highcharts.chart('graph', {
         chart: {
