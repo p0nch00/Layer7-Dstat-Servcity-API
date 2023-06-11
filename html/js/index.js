@@ -28,9 +28,9 @@ window.addEventListener('load', () => {
                         var ch = await json.challenged;
                         var ps = await json.passed
                         s[0].addPoint([x, y], true, true);
-                        //s[1].addPoint([x, ch], true, true);
-                        //s[2].addPoint([x, ps], true, true);
-                        //s[3].addPoint([x, bl], true, true);
+                        s[1].addPoint([x, ch], true, true);
+                        s[2].addPoint([x, ps], true, true);
+                        s[3].addPoint([x, bl], true, true);
                     }
                 }
             }
