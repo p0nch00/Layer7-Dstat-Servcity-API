@@ -27,10 +27,10 @@ window.addEventListener('load', () => {
                         var bl = await json.blocked;
                         var ch = await json.challenged;
                         var ps = await json.passed
-                        await s[0].addPoint([x, y], true, true);
-                        await s[1].addPoint([x, ch], true, true);
-                        await s[2].addPoint([x, ps], true, true);
-                        await s[3].addPoint([x, bl], true, true);
+                        s[0].addPoint([x, y], true, true);
+                        s[1].addPoint([x, ch], true, true);
+                        s[2].addPoint([x, ps], true, true);
+                        s[3].addPoint([x, bl], true, true);
                     }
                 }
             }
@@ -46,15 +46,10 @@ window.addEventListener('load', () => {
             }
         },
         xAxis: {
-            style: "color: rgb(255, 255, 255); cursor: default; font-size: 0.8em; fill: rgb(255, 255, 255);",
             type: 'datetime',
             tickPixelInterval: 150
         },
         yAxis: {
-            style: "color: rgb(255, 255, 255); cursor: default; font-size: 0.8em; fill: rgb(255, 255, 255);",
-            labels : {
-                color : 'white'
-            },
             title: {
                 text: 'Requests per second'
             },
